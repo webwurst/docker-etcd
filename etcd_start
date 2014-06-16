@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#exec etcd -name etcd -peer-addr $(hostname -i):7001 -addr $(hostname -i):4001
+
+exec etcd \
+  -data-dir /tmp \
+  -name etcd \
+  -peer-addr $(hostname -i):7001 \
+  -addr $(hostname -i):4001 \
+  -bind-addr 0.0.0.0 \
+  -peer-bind-addr 0.0.0.0
