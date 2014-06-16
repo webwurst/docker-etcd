@@ -1,6 +1,4 @@
-#from stackbrew/ubuntu:saucy
-# from debian:jessie
-from ubuntu_base
+from webwurst/ubuntu
 
 run mkdir /tmp/etcd
 run curl -L https://github.com/coreos/etcd/releases/download/v0.4.3/etcd-v0.4.3-linux-amd64.tar.gz |\
